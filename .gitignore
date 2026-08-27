@@ -1,0 +1,42 @@
+# Python environments, caches, and local settings
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.env
+.env.*
+!.env.example
+
+# Models and downloaded source media
+models/
+source/
+*.m4a
+*.m4b
+*.aac
+*.flac
+*.mp3
+*.ogg
+*.opus
+*.wav
+*.part
+
+# Generated checkpoints and deliverables
+work/
+output/
+logs/
+reports/runs/
+*.jsonl
+*.srt
+*.vtt
+*.mka
+*.mkv
+*.pid
+*.log
+*.stderr
+
+# OS/editor state
+.DS_Store
+Thumbs.db

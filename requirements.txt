@@ -1,0 +1,11 @@
+# Core runtime used by the checked-in pipeline scripts.
+# Install a CUDA-compatible PyTorch build separately for the target GPU.
+torch>=2.4
+qwen-asr==0.0.6
+transformers>=4.57,<5
+soundfile>=0.12
+numpy>=1.26,<2
+requests>=2.31
+
+# Optional benchmark helper.
+faster-whisper>=1.2

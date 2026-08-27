@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Subtitle QC report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "chunks",
+    "words",
+    "cues",
+    "first_cue_start",
+    "last_cue_end",
+    "max_line_length",
+    "max_cue_duration",
+    "overlap_count",
+    "cues_over_25_cps",
+    "max_cps",
+    "surface_restore_failures",
+    "zero_duration_words_from_aligner_quantization",
+    "negative_word_timings"
+  ],
+  "properties": {
+    "chunks": {"type": "integer", "minimum": 0},
+    "words": {"type": "integer", "minimum": 0},
+    "cues": {"type": "integer", "minimum": 0},
+    "first_cue_start": {"type": ["number", "null"], "minimum": 0},
+    "last_cue_end": {"type": ["number", "null"], "minimum": 0},
+    "max_line_length": {"type": "integer", "minimum": 0},
+    "max_cue_duration": {"type": "number", "minimum": 0},
+    "overlap_count": {"type": "integer", "minimum": 0},
+    "cues_over_25_cps": {"type": "integer", "minimum": 0},
+    "max_cps": {"type": "number", "minimum": 0},
+    "surface_restore_failures": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "zero_duration_words_from_aligner_quantization": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "negative_word_timings": {"type": "integer", "minimum": 0}
+  }
+}

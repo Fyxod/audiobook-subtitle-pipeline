@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mux verification report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_duration",
+    "output_duration",
+    "output_size",
+    "streams",
+    "chapter_count"
+  ],
+  "properties": {
+    "source_duration": {"type": "number", "minimum": 0},
+    "output_duration": {"type": "number", "minimum": 0},
+    "output_size": {"type": "integer", "minimum": 0},
+    "streams": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["index", "codec_name", "codec_type"],
+        "properties": {
+          "index": {"type": "integer", "minimum": 0},
+          "codec_name": {"type": "string"},
+          "codec_type": {"type": "string"},
+          "channels": {"type": "integer", "minimum": 1},
+          "channel_layout": {"type": "string"},
+          "disposition": {"type": "object"},
+          "tags": {"type": "object"}
+        }
+      }
+    },
+    "chapter_count": {"type": "integer", "minimum": 0}
+  }
+}

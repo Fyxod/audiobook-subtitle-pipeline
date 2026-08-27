@@ -1,0 +1,23 @@
+{
+  "description": "Example batch for chaptered long-form audio",
+  "jobs": [
+    {
+      "id": "sample_book",
+      "source": "source/sample_book.m4b",
+      "work_dir": "work/sample_book",
+      "output_dir": "output/sample_book",
+      "output_basename": "sample_book",
+      "glossary_file": null
+    }
+  ],
+  "editor": {
+    "script": "scripts/reconcile_transcripts_vllm.py",
+    "model": "nemotron-49b-v1_5",
+    "base_url_env": "EDITOR_BASE_URL"
+  },
+  "runtime": {
+    "qwen_batch_size": 2,
+    "whisper_batch_size": 2,
+    "whisper_input_group_size": 1
+  }
+}
